@@ -1,0 +1,119 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+.charSearchTop{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+.charSearch{
+   width: 100%;
+   height: 135px;
+   background-color: wheat;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.charSearch>div{
+   width: 100%;
+   height: 65%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.charSearch>div>input{
+   width: 25%;
+   height: 40px;
+   padding-left: 7px;
+   font-size: large;
+   border: 1px solid rgb(255, 231, 97);
+}
+.charSearch>div>input:focus{
+   outline: none;
+   border: 2px solid rgb(255, 217, 0);
+}
+.charSearch>div>button{
+   width: 80px;
+   height: 40px;
+   border: none;
+   background-color: skyblue;
+   color: white;
+}
+.charSearch>div>button:hover{
+   cursor: pointer;
+}
+.charLists{
+   padding: 20px 10%;
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(8,minmax(100px,12.5%));;
+   gap: 7px;
+}
+.userNames{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid cyan;
+   border-radius: 8px;
+   transition: 0.25s linear;
+}
+.userNames:hover{
+   background-color: lightcyan;
+   cursor: pointer;
+}
+.userNames>img{
+   width: 100%;
+   object-fit: contain;
+}
+.charDirectInfos{
+   width: 100%;
+   padding: 10px 15%;
+}
+.charEquips{
+   width: 100%;
+   display: flex;
+}
+.charImg{
+   display: flex;
+}
+.charText{
+   padding: 5px 8px;
+   position: absolute;
+}
+.charText>span{
+   display: block;
+   border-radius: 7px;
+   margin-bottom: 8px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   background-color: rgba(211, 211, 211, 0.405);
+   width: 80px;
+   height: 50px;
+   font-size: small;
+}
+.charImg>img{
+   background-image: url("https://dundam.xyz/img/bg_char.jpg");
+   background-position: center;
+   background-size: contain;
+   border-radius: 7px;
+}
+.charEquip{
+   padding: 0 7px;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   row-gap: 5px;
+   column-gap: 8px;
+}
+.item{
+   border: 1px solid lightgray;
+   display: flex;
+   align-items: center;
+   padding: 0 6px;
+   border-radius: 7px;
+}

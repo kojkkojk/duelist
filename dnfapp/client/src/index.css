@@ -1,0 +1,34 @@
+.Top{
+   width: 100%;
+   height: 30px;
+}
+.Top>ul{
+   display: flex;
+   list-style: none;
+   height: 100%;
+   width: 100%;
+}
+.Top>ul>li{
+   width: 20%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: cadetblue;
+   margin-right:  5px;
+}
+.Top>ul>li:nth-child(5){
+   margin: 0;
+}
+.Top>ul>li>a{
+   text-decoration: none;
+   width: 100%;
+   height: 100%;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: 0.25s ease-in-out;
+}
+.Top>ul>li>a:hover{
+   color: black;
+}

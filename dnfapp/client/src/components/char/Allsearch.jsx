@@ -10,6 +10,7 @@ function Allsearch() {
    const [alertMSG, setalertMSG] = useState("");
    const changeCharData = useStore((state)=> state.changeCharData);
    const typingCharName = (e) => {setCharName(e.target.value)};
+
    const shootApi = async () => {
       axios.get('/char', { params: { charName: charName } }).then(res => {
          let data = res.data
@@ -24,6 +25,7 @@ function Allsearch() {
          }
       }).catch(err=>console.log(err))
    }
+   
    const check=()=>{
       if(charName.length === 0){
          setalertMSG("캐릭터 명을 입력하세요!")
@@ -67,7 +69,7 @@ function Allsearch() {
                [{serverName[users.serverId]}] {users.characterName} <br /> Lv.{users.level} / {users.jobGrowName}
                </span>
                </div> )) : 
-               <div style={{ textAlign: "center", width: "100%" }}>{alertMSG}</div>}
+               <div style={{ textAlign: "center", width: "800%" }}>{alertMSG}</div>}
          </div>
          <Detail />
       </div>

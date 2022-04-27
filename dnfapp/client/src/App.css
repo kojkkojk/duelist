@@ -25,7 +25,7 @@
    align-items: center;
 }
 .charSearch>div>input{
-   width: 25%;
+   width: 35%;
    height: 40px;
    padding-left: 7px;
    font-size: large;
@@ -79,23 +79,40 @@
 }
 .charImg{
    display: flex;
+   width: 50%;
+}
+.charImg>img{
+   height: 400px;
 }
 .charText{
-   padding: 5px 8px;
-   position: absolute;
+   padding: 0 8px;
+   width: 50%;
+   display: grid;
+   row-gap: 5px;
+   grid-template-columns: repeat(1,1fr);
 }
 .charText>span{
-   display: block;
    border-radius: 7px;
-   margin-bottom: 8px;
+   padding: 0 6px;
    display: flex;
    justify-content: center;
    align-items: center;
-   color: white;
-   background-color: rgba(211, 211, 211, 0.405);
-   width: 80px;
-   height: 50px;
-   font-size: small;
+   border: 1px solid lightgray;
+   width: 100%;
+}
+@media screen and (max-width: 1100px) {
+   .charText{
+      position: absolute;
+      padding: 8px;
+      width: 25%;
+   }
+   .charText>span{
+      width: 50%;
+      height: 40px;
+      border: none;
+      background-color: rgba(185, 185, 185, 0.705);
+      color: white;
+   }
 }
 .charImg>img{
    background-image: url("https://dundam.xyz/img/bg_char.jpg");
@@ -104,11 +121,51 @@
    border-radius: 7px;
 }
 .charEquip{
-   padding: 0 7px;
    display: grid;
    grid-template-columns: repeat(2,1fr);
    row-gap: 5px;
    column-gap: 8px;
+   width: 50%;
+}
+.charSpec{
+   margin:  15px 10% 0 10%;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+}
+.fss{
+   display: flex;
+   height: 50px;
+   padding: 0 5px 5px 5px;
+   margin-bottom: 5px;
+}
+.trs{
+   width: 30%;
+   height: 100%;
+   text-align: center;
+   border: 1px solid lightgray;
+   border-radius: 7px;
+}
+.trs>span{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   font-size: 12pt;
+}
+.tts{
+   width: 70%;
+   text-align: center;
+   border: 1px solid lightgray;
+   border-radius: 7px;
+}
+.tts>span{   
+   font-size: 15pt;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 .item{
    border: 1px solid lightgray;
@@ -116,4 +173,16 @@
    align-items: center;
    padding: 0 6px;
    border-radius: 7px;
+}
+.ItemsLists{
+   padding: 20px 10%;
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(10,minmax(50px,10%));;
+   gap: 7px;
+}
+.itemNames{
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }

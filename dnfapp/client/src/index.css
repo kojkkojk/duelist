@@ -1,34 +1,56 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+.커먼{color:#FFFFFF;}
+.언커먼{color:#68D5ED;}
+.레어{color:#B36BFF;}
+.유니크{color:#FF00FF;}
+.에픽{color:#FFB400;}
+.크로니클{color:#FF6666;}
+.레전더리{color:#FF7800;}
+.신화{
+   background: linear-gradient(180deg, rgb(243, 233, 84), rgb(224, 0, 150));
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: rgba(0, 0, 0, 0) !important;
+   text-shadow: 0px 0px 0px rgba(255, 255, 255, 0) !important;
+}
+/*************************************************************Top바 시작*/
 .Top{
    width: 100%;
-   height: 30px;
+   height: 50px;
 }
 .Top>ul{
-   display: flex;
-   list-style: none;
-   height: 100%;
    width: 100%;
+   height: 100%;
+   list-style: none;
+   display: flex;
+   gap: 5px;
 }
 .Top>ul>li{
    width: 20%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background-color: cadetblue;
-   margin-right:  5px;
+   text-align: center;
+   transition: ease-out 0.25s;
+   background-color: blue;
 }
-.Top>ul>li:nth-child(5){
-   margin: 0;
+.Top>ul>li:hover{
+   background-color: skyblue;
 }
 .Top>ul>li>a{
+   display: inline-block;
    text-decoration: none;
-   width: 100%;
-   height: 100%;
    color: white;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   transition: 0.25s ease-in-out;
+   height: 100%;
+   width: 50%;
+   font-size: small;
 }
-.Top>ul>li>a:hover{
-   color: black;
+.Top>ul>li>a>.icons{
+   padding-top: 3px;
+   margin-bottom: 4px;
+   display: block;
+   height: 50%;
+   font-size: 15pt;
 }
+/*************************************************************Top바 끝*/

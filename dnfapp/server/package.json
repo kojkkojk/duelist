@@ -3,7 +3,9 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
+    "dotenv": "^16.0.1",
     "express": "^4.17.3",
+    "mysql": "^2.18.1",
     "nodemon": "^2.0.15",
     "request": "^2.88.2"
   }

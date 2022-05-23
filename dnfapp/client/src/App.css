@@ -1,287 +1,258 @@
-*{
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
+/*****************************************캐릭서치 시작*/
+.charSearch{
+   width: 100%;
+   min-height: 100vh;
+   padding-top: 15px;
 }
 .charSearchTop{
    width: 100%;
    display: flex;
    flex-direction: column;
-}
-.charSearch{
-   width: 100%;
-   margin-top: 12px;
-   height: 135px;
-   display: flex;
-   flex-direction: column;
    justify-content: center;
    align-items: center;
 }
-.charSearch>span{
+.charTitle{
+   padding-top: 10px;
+   height: 70px;
    width: 100%;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   height: 45%;
 }
-.charSearch>div{
+.charTitle>p{
+   margin-top: 8px;
+   font-size: small;
+}
+.charInput{
    width: 100%;
-   height: 55%;
+   height: 50px;
    display: flex;
    justify-content: center;
    align-items: center;
+   gap: 5px;
 }
-.charSearch>div>input{
-   width: 35%;
-   height: 40px;
-   padding-left: 7px;
-   font-size: large;
-   border: 1px solid rgb(255, 108, 39);
+.charInput>input{
+   padding-left: 8px;
+   width: 30%;
+   height: 70%;
+   font-size: 12pt;
+   border: 1px solid lightblue;   
    border-radius: 4px;
 }
-.charSearch>div>input:focus{
+.charInput>input:focus{
    outline: none;
-   border: 2px solid rgb(255, 108, 0);
 }
-.charSearch>div>button{
-   width: 80px;
-   height: 40px;
+.charInput>button{
    border: none;
-   margin-left: 4px;
-   background-color: skyblue;
-   border-radius: 4px;
+   background-color: lightblue;
    color: white;
+   height: 70%;
+   width: 5%;
 }
-.charSearch>div>button:hover{
+.charInput>button:hover{
    cursor: pointer;
 }
 .charLists{
-   padding: 20px 10%;
    width: 100%;
+   padding: 0 15%;
    display: grid;
-   grid-template-columns: repeat(8,minmax(100px,12.5%));;
-   gap: 7px;
+   grid-template-columns: repeat(4,1fr);
+   column-gap: 5px;
+   row-gap: 10px;
 }
 .userNames{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   border: 1px solid cyan;
+   border: 1px solid firebrick;
+   transition: ease-in-out 0.25s;
    border-radius: 8px;
-   transition: 0.25s linear;
 }
 .userNames:hover{
-   background-color: lightcyan;
    cursor: pointer;
+   background-color: aquamarine;
 }
 .userNames>img{
+   margin-top: -10%;
    width: 100%;
+   height: 80%;
    object-fit: contain;
 }
+.charBasicInfo{
+   height: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+/*****************************************캐릭서치 끝*/
+/*****************************************캐릭인포 시작*/
 .charDirectInfos{
    width: 100%;
-   padding: 10px 15%;
+   padding: 3% 15% 0 15%;
 }
 .charEquips{
    width: 100%;
+   height: 400px;
    display: flex;
 }
 .charImg{
-   display: flex;
-   width: 50%;
-}
-.charImg>img{
-   height: 400px;
-}
-.charText{
-   padding: 0 8px;
-   width: 50%;
-   display: grid;
-   row-gap: 5px;
-   grid-template-columns: repeat(1,1fr);
-}
-.charText>span{
-   border-radius: 7px;
-   padding: 0 6px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border: 1px solid lightgray;
    width: 100%;
+   height: 100%;
+   display: flex;
 }
-@media screen and (max-width: 1100px) {
-   .charText{
-      position: absolute;
-      padding: 8px;
-      width: 25%;
-   }
-   .charText>span{
-      width: 50%;
-      height: 40px;
-      border: none;
-      background-color: rgba(185, 185, 185, 0.705);
-      color: white;
-   }
-}
-.charImg>img{
-   background-image: url("https://dundam.xyz/img/bg_char.jpg");
+.imgimg{
+   height: 100%;
+   background-image: url("https://firebasestorage.googleapis.com/v0/b/plogprojects.appspot.com/o/bg_char.jpg?alt=media&token=790a0186-56d3-4c42-ba27-4609cab8266a");
+   background-repeat: no-repeat;
    background-position: center;
    background-size: contain;
-   border-radius: 7px;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
 }
-.charEquip{
-   display: grid;
-   grid-template-columns: repeat(2,1fr);
-   row-gap: 5px;
-   column-gap: 8px;
+.imgimg>img{
+   width: calc(100% - 15px);
+   height: 100%;
+   object-fit: contain;
+}
+.charText{
    width: 50%;
 }
-.charSpec{
-   margin:  15px 10% 0 10%;
+.charText>div{
+   width: 100%;
+   height: 50px;
+}
+/*****************************************캐릭인포 끝*/
+/*****************************************캐릭세부인포 시작*/
+.equipWindowBtn{
+   width: 100%;
+   display: flex;
+   gap: 7px;
+   height: 50px;
+}
+.equipWindowBtn>div{
+   margin-top: 5px;
+   width: 20%;
+   height: 100%;
+   background-color: cadetblue;
+   text-align: center;
+   line-height: 50px;
+}
+.equipWindowBtn>div:hover{
+   cursor: pointer;
+}
+.charEquip{
+   width: 100%;
    display: grid;
    grid-template-columns: repeat(2,1fr);
 }
-.equipWindowBtn{
-   margin-top: 10px;
-   width: 100%;
-   height: 50px;
-   display: flex;
-   gap: 5px;
-   flex-direction: row;
-}
-.equipWindowBtn>div{
-   width: 25%;
-   border: 1px solid lightgray;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-radius: 8px;
-}
-.fss{
-   display: flex;
-   height: 50px;
-   padding: 0 5px 5px 5px;
-   margin-bottom: 5px;
-}
-.trs{
-   width: 30%;
-   height: 100%;
-   text-align: center;
-   border: 1px solid lightgray;
-   border-radius: 7px;
-}
-.trs>span{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-   height: 100%;
-   font-size: 12pt;
-}
-.tts{
-   width: 70%;
-   text-align: center;
-   border: 1px solid lightgray;
-   border-radius: 7px;
-}
-.tts>span{   
-   font-size: 15pt;
-   width: 100%;
-   height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
 .item{
-   border: 1px solid lightgray;
    display: flex;
-   align-items: center;
-   padding: 0 6px;
-   border-radius: 7px;
 }
-.ItemsLists{
-   padding: 20px 15%;
-   width: 100%;
-   display: flex;
-   flex-wrap: wrap;
-}
-.itemNames{
-   display: flex;
-   width: 25%;
-   justify-content: center;
-   align-items: center;
-   margin-bottom: 10px;
-   height: 50px;
-}
-.tetes{
-   width: 100%;
-   height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.imgbox{
-   height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.itemitemitem{
-   width: 70%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 100%;
-   border: 1px solid lightgray;
-   border-radius: 4px;
-}
-.boardPage{
-   width: 100%;
-   height: 100%;
-   background-color: silver;
-}
-.noticeTable{
-   width: 100%;
-   padding: 50px 10% 0 10%;
-   display: flex;
-   justify-content: center;
-}
-.freeTable{
-   width: 100%;
-   padding: 0 10%;
-   display: flex;
-   justify-content: center;}
-.noticeTable>table,.freeTable>table{
-   width: 100%;
-}
-.noticeTable>table>thead>tr>th,.freeTable>table>tbody>tr>th,.freeTable>table>tbody>tr>td{
-   border: 1px solid beige;
+.item>img{
+   width: 35px;
    height: 35px;
 }
-.freeTable>table>tbody>tr>td{
-   padding-left: 15px;
+.item>div{
+   width: calc(100% - 35px);
+   height: 35px;
+   display: flex;
+   align-items: center;
+   padding-left: 8px;
+   font-size: 10pt;
+   text-shadow: 0px 0px 0px rgb(175, 175, 175);
+}
+.item>div>span{
+   color: black;
+}
+.charSpec{
+   margin-top: 8px;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   column-gap: 5px;
+   padding: 0 10%;
+}
+.fss{
+   margin-top: 8px;
+   display: flex;
+   border: 1px solid lightgray;
+   border-radius: 5px;
+   height: 35px;
+}
+.trs{
+   width: 25%;
+   text-align: center;
+   line-height: 35px;
+   overflow: hidden;
+   border-right: 1px solid lightgray;
+}
+.tts{
+   width: 75%;
+   line-height: 35px;
+   text-align: center;
 }
 .fss2{
+   margin-top: 8px;
    display: flex;
-   width: 100%;
-   height: 60px;
-   padding: 0 5px 5px 5px;
-   margin-bottom: 5px;
+   height: 50px;
+   border: 1px solid lightgray;
+   border-radius: 5px;
 }
 .trs2{
-   width: 60px;
+   width: 20%;
+   display: flex;
+   justify-content: center;
 }
 .tts2{
-   width: 100%;
-   text-align: center;
-   border: 1px solid lightgray;
-   border-radius: 7px;
+   width: 80%;
 }
 .tts2>span{
    width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   height: 50%;
+   display: inline-block;
+   overflow: hidden;
 }
+.charSpec2{
+   width: 100%;
+   margin-top: 15px;
+   padding: 0 8%;
+   display: grid;
+   grid-template-columns: repeat(8,1fr);
+   gap: 10px;
+}
+.totototo{
+   border: 1px solid lightgrey;
+   border-radius: 5px;
+   width: 100%;
+   min-height: 200px;
+}
+.totototo:nth-child(1){
+	grid-column: 3 / 7;
+	grid-row: 1 / 2;
+}
+.totototo:nth-child(2){   
+	grid-column: 1 / 5;
+	grid-row: 2 / 3;
+}
+.totototo:nth-child(3){   
+	grid-column: 5 / 9;
+	grid-row: 2 / 3;
+}
+.talisman{
+   width: 100%;
+   height: 30%;
+   text-align: center;
+}
+.talisman>span{
+   width: 100%;
+   color: #cf00cf;
+}
+.taliRunes{
+   height: 70%;
+   display: flex;
+   flex-direction: column;
+}
+.taliRunes>span{
+   font-size: 10pt;
+   height: 33.33%;
+   text-align: center;
+}
+/*****************************************캐릭세부인포 끝*/

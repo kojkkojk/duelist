@@ -9,7 +9,6 @@ function AllItemSearch() {
 
    const pullApi = async () => {
       axios.get("/item", { params: { itemName: itemName } }).then(res => {
-         console.log(res.data.rows);
          setItemList(res.data.rows);
       })
    }
@@ -37,8 +36,8 @@ function AllItemSearch() {
    }
 
    return (
-      <div className='charSearchTop'>
-         <div className='charSearch'>
+      <div className='charSearch'>
+         <div className='charSearchTop'>
             <span><h2>아이템 검색</h2>유니크 등급 이상의 아이템만 검색이 가능합니다</span>
             <div>
                <input type="text" onChange={typingItemName} onKeyDown={onKeyEnter} value={itemName}/><button onClick={check}>검색</button>

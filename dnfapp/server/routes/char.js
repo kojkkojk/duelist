@@ -6,7 +6,7 @@ const apiConfigs = require("../configs/configs");
 router.get("/",(req,res)=>{
    let characterName = req.query;
    let encodeed = encodeURI(characterName.charName);
-   request(`${apiConfigs.firstURL}/servers/all/characters?characterName=${encodeed}&limit=20&wordType=full&apikey=${apiConfigs.apiKey}`,(err,response,body)=>{
+   request(`${apiConfigs.firstURL}/servers/all/characters?characterName=${encodeed}&limit=100&wordType=full&apikey=${apiConfigs.apiKey}`,(err,response,body)=>{
       if(err)throw err;
       let obj = JSON.parse(body);
       res.json({...obj})
@@ -31,11 +31,7 @@ router.get("/detail",(req,res)=>{
    let obj5 = JSON.parse(body);
    let totalInfo = Object.assign(obj,obj2,obj3,obj4,obj5);
    res.json({...totalInfo})
-   })
-   })
-   })
-   })
-   })
+   })})})})})
 })
 
 module.exports = router;

@@ -3,13 +3,14 @@
    margin: 0;
    box-sizing: border-box;
 }
-.커먼{color:#FFFFFF;}
-.언커먼{color:#68D5ED;}
-.레어{color:#B36BFF;}
-.유니크{color:#FF00FF;}
-.에픽{color:#FFB400;}
-.크로니클{color:#FF6666;}
-.레전더리{color:#FF7800;}
+.커먼{color:#FFFFFF !important;}
+.언커먼{color:#68D5ED !important;}
+.레어{color:#B36BFF !important;}
+.유니크{color:#FF00FF !important;}
+.에픽{color:#FFB400 !important;}
+.크로니클{color:#FF6666 !important;}
+.레전더리{color:#FF7800 !important;}
+.차원의{color: #c300ff !important;}
 .신화{
    background: linear-gradient(180deg, rgb(243, 233, 84), rgb(224, 0, 150));
    background-clip: text;
@@ -33,10 +34,10 @@
    width: 20%;
    text-align: center;
    transition: ease-out 0.25s;
-   background-color: blue;
+   background-color: rgb(161, 210, 230)
 }
 .Top>ul>li:hover{
-   background-color: skyblue;
+   background-color: rgb(96, 204, 247);
 }
 .Top>ul>li>a{
    display: inline-block;
@@ -54,3 +55,12 @@
    font-size: 15pt;
 }
 /*************************************************************Top바 끝*/
+/*************************************************************footer 시작*/
+footer{
+   width: 100%;
+   padding-top: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+/*************************************************************footer 끝*/

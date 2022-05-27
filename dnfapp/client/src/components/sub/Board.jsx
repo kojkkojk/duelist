@@ -1,16 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { firestoreDB } from '../../firebase/configs';
+import { collection, getDocs } from "firebase/firestore";
 
 function Board() {
+   const querySnap = getDocs(collection(firestoreDB, "PON"));
+   const call = async () => {
+      await querySnap.then(data=>{
+         data.forEach((doc) => {
+           console.log(doc.id,"+",doc.data());
+         })
+      })
+   }
    return (
       <div className='boardPage'>
-         <h2>게시판</h2>
          <div className='noticeTable'>
             <table>
                <colgroup>
-                  <col width={"10%"}/>
-                  <col width={"70%"}/>
-                  <col width={"10%"}/>
-                  <col width={"10%"}/>
+                  <col width={"10%"} />
+                  <col width={"70%"} />
+                  <col width={"10%"} />
+                  <col width={"10%"} />
                </colgroup>
                <thead>
                   <tr>
@@ -34,51 +43,17 @@ function Board() {
                </thead>
             </table>
          </div>
+         <button onClick={call}>onClick</button>
          <div className='freeTable'>
             <table>
                <colgroup>
-                  <col width={"10%"}/>
-                  <col width={"70%"}/>
-                  <col width={"10%"}/>
-                  <col width={"10%"}/>
+                  <col width={"10%"} />
+                  <col width={"70%"} />
+                  <col width={"10%"} />
+                  <col width={"10%"} />
                </colgroup>
                <tbody>
-                  <tr>
-                     <th>1</th>
-                     <td>2</td>
-                     <th>1</th>
-                     <th>1</th>
-                  </tr>
-                  <tr>
-                     <th>1</th>
-                     <td>2</td>
-                     <th>1</th>
-                     <th>1</th>
-                  </tr>
-                  <tr>
-                     <th>1</th>
-                     <td>2</td>
-                     <th>1</th>
-                     <th>1</th>
-                  </tr>
-                  <tr>
-                     <th>1</th>
-                     <td>2</td>
-                     <th>1</th>
-                     <th>1</th>
-                  </tr>
-                  <tr>
-                     <th>1</th>
-                     <td>2</td>
-                     <th>1</th>
-                     <th>1</th>
-                  </tr>
-                  <tr>
-                     <th>1</th>
-                     <td>2</td>
-                     <th>1</th>
-                     <th>1</th>
-                  </tr>
+
                </tbody>
             </table>
          </div>

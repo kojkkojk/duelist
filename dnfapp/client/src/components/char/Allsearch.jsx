@@ -10,7 +10,11 @@ function Allsearch() {
    const [alertMSG, setalertMSG] = useState("");
    const changeCharData = useStore((state) => state.changeCharData);
    const typingCharName = (e) => { setCharName(e.target.value) };
-
+   const fillters = (elements) => {
+      if (elements.level === 110) {
+         return true;
+      }
+   }
    const shootApi = async () => {
       await axios.get('/char', { params: { charName: charName } }).then(res => {
          let data = res.data
@@ -21,7 +25,9 @@ function Allsearch() {
                setalertMSG("")
             }, 1500);
          } else {
-         setallCharList(data.rows)
+            let filArr = data.rows;
+            let fillArr2 = filArr.filter(fillters)
+            setallCharList(fillArr2)
          }
       }).catch(err => console.log(err))
    }
@@ -57,24 +63,23 @@ function Allsearch() {
 
    return (
       <div className='charSearch'>
-         <div className='charSearchTop'>           
-            <div className='charTitle'><h2>캐릭터 검색</h2><p>50레벨 이상의 캐릭터만 검색이 가능합니다</p></div>
+         <div className='charSearchTop'>
+            <div className='charTitle'><h2>캐릭터 검색</h2><p>만렙 캐릭터만 검색이 가능합니다</p></div>
             <div className='charInput'>
-               <input type="text" onChange={typingCharName} onKeyDown={onKeyEnter} value={charName}/>
+               <input type="text" onChange={typingCharName} onKeyDown={onKeyEnter} value={charName} />
                <button onClick={check}>검색</button>
             </div>
          </div>
          <div className='charLists'>
             {allCharList.length > 0 ? allCharList.map((users, index) => (
-               <React.Fragment  key={index}>
-               {users.level < 50 ? "" :
-               <div className='userNames' onClick={() => { userDetail(users.serverId, users.characterId); setallCharList([]) }}>
-               <div className='charBasicInfo'>
-                  [{serverName[users.serverId]}]&nbsp;{users.characterName}
-               </div>
-               <img src={`https://img-api.neople.co.kr/df/servers/${users.serverId}/characters/${users.characterId}?zoom=1`} alt="info" />
-               <div className='charBasicInfo'>lv.{users.level} / {users.jobGrowName}</div>
-               </div> }               
+               <React.Fragment key={index}>
+                  <div className='userNames' onClick={() => { userDetail(users.serverId, users.characterId); setallCharList([]) }}>
+                     <div className='charBasicInfo'>
+                        [{serverName[users.serverId]}]&nbsp;{users.characterName}
+                     </div>
+                     <img src={`https://img-api.neople.co.kr/df/servers/${users.serverId}/characters/${users.characterId}?zoom=1`} alt="info" />
+                     <div className='charBasicInfo'>lv.{users.level} / {users.jobGrowName}</div>
+                  </div>
                </React.Fragment>)) : <div style={{ textAlign: "center", width: "800%" }}>{alertMSG}</div>}
          </div>
          <Detail />

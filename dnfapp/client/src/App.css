@@ -3,6 +3,7 @@
    width: 100%;
    min-height: 100vh;
    padding-top: 15px;
+   margin-bottom: 5%;
 }
 .charSearchTop{
    width: 100%;
@@ -31,6 +32,7 @@
    justify-content: center;
    align-items: center;
    gap: 5px;
+   margin-bottom: 10px;
 }
 .charInput>input{
    padding-left: 8px;
@@ -62,9 +64,9 @@
    row-gap: 10px;
 }
 .userNames{
-   border: 1px solid firebrick;
+   border: 1px solid lightgray;
    transition: ease-in-out 0.25s;
-   border-radius: 8px;
+   border-radius: 4px;
 }
 .userNames:hover{
    cursor: pointer;
@@ -92,6 +94,7 @@
    width: 100%;
    height: 400px;
    display: flex;
+   margin: 20px 0 15px 0;
 }
 .charImg{
    width: 100%;
@@ -119,52 +122,125 @@
 .charText>div{
    width: 100%;
    height: 50px;
+   display: flex;
+   border: 1px solid lightgrey;
+   margin-bottom: 5px;
+   border-radius: 5px;
 }
-/*****************************************캐릭인포 끝*/
+.charText>div>span{
+   display: flex;
+   align-items: center;
+}
+.charText>div>span:nth-child(1){
+   width: 30%;
+   justify-content: center;
+   border-right: 1px solid lightgrey;
+}
+.charText>div>span:nth-child(2){
+   width: 70%;
+   padding-left: 15px;
+}
+   /*****************************************캐릭인포 끝*/
 /*****************************************캐릭세부인포 시작*/
 .equipWindowBtn{
+   margin-top: 20px;
    width: 100%;
    display: flex;
    gap: 7px;
    height: 50px;
 }
 .equipWindowBtn>div{
-   margin-top: 5px;
    width: 20%;
    height: 100%;
-   background-color: cadetblue;
+   border-radius: 4px;
    text-align: center;
    line-height: 50px;
+   border: 1px solid lightgrey;
+   transition: 0.2s ease-in-out;
 }
 .equipWindowBtn>div:hover{
    cursor: pointer;
+   background-color: rgb(221, 244, 255);
+   border: 1px solid rgb(221, 244, 255);
 }
 .charEquip{
    width: 100%;
-   display: grid;
-   grid-template-columns: repeat(2,1fr);
+   padding: 0 5%;
+   margin-top: 15px;
 }
 .item{
    display: flex;
+   margin-bottom: 5px;
+   width: 100%;
+   height: 60px;
+   border: 1px solid lightgrey;
+   border-radius: 4px;
 }
-.item>img{
-   width: 35px;
-   height: 35px;
+.item>.ddsd{
+   width: 12%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-right: 1px solid lightgray;
 }
-.item>div{
-   width: calc(100% - 35px);
-   height: 35px;
+.equipTem{
+   width: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-right: 1px solid lightgray;
+}
+.ref{
+   width: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.item>.ddds{
+   width: 68%;
+   height: 100%;
    display: flex;
    align-items: center;
-   padding-left: 8px;
-   font-size: 10pt;
    text-shadow: 0px 0px 0px rgb(175, 175, 175);
+   border-right: 1px solid lightgray;
+}
+.item>.equipTem>img{
+   width: 80%;
+   height: 80%;
+   object-fit: contain;
+}
+.nava{
+   width: 55%;
+   padding-left: 8px;
+}
+.havana{
+   width: 45%;
+   height: 100%;
+   padding-left: 8px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   border-left: 1px solid lightgray;
+}
+.ech{
+   width: 100% !important;
+   height: 60%;
+   font-size: smaller;
+   color: rgb(156, 154, 154) !important;
+}
+.ech2{
+   width: 100%;
+   height: 40%;
+   font-size: small;
 }
 .item>div>span{
+   width: 100%;
+   text-align: center;
    color: black;
 }
 .charSpec{
-   margin-top: 8px;
+   margin-top: 15px;
    display: grid;
    grid-template-columns: repeat(2,1fr);
    column-gap: 5px;
@@ -174,18 +250,19 @@
    margin-top: 8px;
    display: flex;
    border: 1px solid lightgray;
-   border-radius: 5px;
-   height: 35px;
+   border-radius: 4px;
+   height: 40px;
 }
 .trs{
-   width: 25%;
+   width: 30%;
    text-align: center;
+   font-size: small;
    line-height: 35px;
    overflow: hidden;
    border-right: 1px solid lightgray;
 }
 .tts{
-   width: 75%;
+   width: 70%;
    line-height: 35px;
    text-align: center;
 }
@@ -194,7 +271,7 @@
    display: flex;
    height: 50px;
    border: 1px solid lightgray;
-   border-radius: 5px;
+   border-radius: 4px;
 }
 .trs2{
    width: 20%;
@@ -220,7 +297,7 @@
 }
 .totototo{
    border: 1px solid lightgrey;
-   border-radius: 5px;
+   border-radius: 4px;
    width: 100%;
    min-height: 200px;
 }
@@ -256,3 +333,56 @@
    text-align: center;
 }
 /*****************************************캐릭세부인포 끝*/
+/*****************************************아이템 리스트 시작*/
+.ItemsLists{
+   width: 100%;
+   padding: 3% 18%;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+}
+.itemNames{
+   width: 100%;
+   border: 1px solid lightgray;
+   margin-bottom: 10px;
+}
+.tetes{
+   width: 100%;
+   display: flex;
+}
+.itemRarity,.imgbox{
+   width: 15%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-shadow: 0px 0px 0px rgb(175, 175, 175);
+}
+.itemTypeLevel{
+   width: 20%;
+   display: flex;
+   flex-direction: column;
+}
+.itemTypeLevel>span{
+   height: 50%;
+   text-align: center;
+   font-size: small;
+}
+.itemitemitem{
+   width: 50%;
+   text-align: center;
+}
+.growInfo{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   font-size: small;
+}
+.imgbox>img{
+   width: 40px;
+   height: 40px;
+   object-fit: contain;
+}
+/*****************************************아이템 리스트 끝*/
+.boardPage{
+   width: 100%;
+   min-height: 100vh;
+}

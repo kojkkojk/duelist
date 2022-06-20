@@ -29,9 +29,15 @@ router.get("/detail",(req,res)=>{
    request(`${apiConfigs.firstURL}/servers/${charData.serverId}/characters/${obj.characterId}/equip/talisman?apikey=${apiConfigs.apiKey}`,(errrr,response5,body)=>{
    if(errrr) throw errrr;
    let obj5 = JSON.parse(body);
-   let totalInfo = Object.assign(obj,obj2,obj3,obj4,obj5);
+   request(`${apiConfigs.firstURL}/servers/${charData.serverId}/characters/${obj.characterId}/skill/buff/equip/equipment?apikey=${apiConfigs.apiKey}`,(errorrr,response6,body)=>{
+   if(errorrr)throw errorrr;
+   let obj6 = JSON.parse(body);
+   request(`${apiConfigs.firstURL}/servers/${charData.serverId}/characters/${obj.characterId}/skill/style?apikey=${apiConfigs.apiKey}`,(errs2,response7,body)=>{
+   if(errs2)throw errs2;
+   let obj7 = JSON.parse(body);
+   let totalInfo = Object.assign(obj,obj2,obj3,obj4,obj5,obj6,{skillStyle:obj7.skill});
    res.json({...totalInfo})
-   })})})})})
+   })})})})})})})
 })
 
 module.exports = router;

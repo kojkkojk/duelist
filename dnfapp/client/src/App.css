@@ -1,388 +1,429 @@
-/*****************************************캐릭서치 시작*/
-.charSearch{
-   width: 100%;
+@font-face {
+   font-family: 'HaenamFont';
+   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/HaenamFont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'HallymGothic-Regular';
+   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
+}
+.mid{
    min-height: 100vh;
-   padding-top: 15px;
-   margin-bottom: 5%;
-}
-.charSearchTop{
-   width: 100%;
    display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+   padding: 0 20%;
 }
-.charTitle{
-   padding-top: 10px;
-   height: 70px;
+.mid>.main{
    width: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+   padding: 10px;
 }
-.charTitle>p{
-   margin-top: 8px;
-   font-size: small;
-}
-.charInput{
+.mid>.main>.charSearchTop{
    width: 100%;
-   height: 50px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 5px;
+   text-align: center;
    margin-bottom: 10px;
 }
-.charInput>input{
+.mid>.main>.charSearchTop>.charInput{
+   margin-top: 10px;
+   padding: 10px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 3px;
+}
+.mid>.main>.charSearchTop>.charInput>input{
+   width: 40%;
+   height: 35px;
    padding-left: 8px;
-   width: 30%;
-   height: 70%;
-   font-size: 12pt;
-   border: 1px solid lightblue;   
+   font-size: 11pt;
+   border: 1px solid lightgray;   
    border-radius: 4px;
 }
-.charInput>input:focus{
+.mid>.main>.charSearchTop>.charInput>input:focus{
    outline: none;
 }
-.charInput>button{
+.mid>.main>.charSearchTop>.charInput>button{
    border: none;
-   background-color: lightblue;
-   color: white;
-   height: 70%;
-   width: 5%;
+   background-color: lightgray;
+   color: grey;
+   height: 35px;
+   border-radius: 4px;
+   width: 10%;
 }
-.charInput>button:hover{
+.mid>.main>.charSearchTop>.charInput>button:hover{
    cursor: pointer;
 }
-.charLists{
+.searchForm{
    width: 100%;
-   padding: 0 15%;
-   display: grid;
-   grid-template-columns: repeat(4,1fr);
-   column-gap: 5px;
-   row-gap: 10px;
+   margin-top: 10px;
+   height: 35px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
-.userNames{
+.searchForm>span{
+   width: 20%;
+}
+/***********************************************************************************/
+.mid>.main>.charLists{
+   width: 100%;
+   text-align: center;
+   display: grid;
+   grid-template-columns: repeat(5,1fr);
+   gap: 10px;
+}
+.mid>.main>.charLists>.userNames{
    border: 1px solid lightgray;
    transition: ease-in-out 0.25s;
    border-radius: 4px;
+   height: 250px;
+   overflow: hidden;
+   text-align: center;
+   padding: 0 20px;
 }
-.userNames:hover{
+.mid>.main>.charLists>.userNames:hover{
    cursor: pointer;
-   background-color: aquamarine;
+   background-color: rgba(158, 252, 197, 0.664);
 }
-.userNames>img{
-   margin-top: -10%;
+.mid>.main>.charLists>.userNames>img{
+   margin-top: -25px;
    width: 100%;
-   height: 80%;
+   object-fit: contain;
+   transition: ease-in-out 0.3s;
+}
+.mid>.main>.charLists>.userNames>img:hover{
+   width: 130%;
+   margin: -90px -90px 0px -90px;
    object-fit: contain;
 }
-.charBasicInfo{
+.mid>.main>.charLists>.userNames>.charBasicInfo{
    height: 10%;
+   text-align: center;
+}
+.mid>.main>.charLists>.userNames>.charBasicInfo>span{
+   font-size: 12px;
+}
+/***********************************************************************************/
+.mid>.main>.charEquips{
+   padding: 5px 0 10px 0;
+}
+.mid>.main>.charEquips>.charImg{
    display: flex;
-   justify-content: center;
    align-items: center;
 }
-/*****************************************캐릭서치 끝*/
-/*****************************************캐릭인포 시작*/
-.charDirectInfos{
-   width: 100%;
-   padding: 3% 15% 0 15%;
-}
-.charEquips{
-   width: 100%;
-   height: 400px;
-   display: flex;
-   margin: 20px 0 15px 0;
-}
-.charImg{
-   width: 100%;
-   height: 100%;
-   display: flex;
-}
-.imgimg{
-   height: 100%;
+.mid>.main>.charEquips>.charImg>.imgimg{
+   width: 400px;
+   height: 460px;
+   margin: 0 2%;
    background-image: url("https://firebasestorage.googleapis.com/v0/b/plogprojects.appspot.com/o/bg_char.jpg?alt=media&token=790a0186-56d3-4c42-ba27-4609cab8266a");
-   background-repeat: no-repeat;
    background-position: center;
-   background-size: contain;
-   overflow: hidden;
+   background-size: cover;
+   border-radius: 8px;
    display: flex;
-   justify-content: center;
+   align-items: center;
+   overflow: hidden;
 }
-.imgimg>img{
-   width: calc(100% - 15px);
-   height: 100%;
+.mid>.main>.charEquips>.charImg>.imgimg>img{
+   margin-top: 35px;
+   width: 100%;
    object-fit: contain;
 }
-.charText{
-   width: 50%;
-}
-.charText>div{
-   width: 100%;
-   height: 50px;
-   display: flex;
-   border: 1px solid lightgrey;
-   margin-bottom: 5px;
-   border-radius: 5px;
-}
-.charText>div>span{
-   display: flex;
-   align-items: center;
-}
-.charText>div>span:nth-child(1){
-   width: 30%;
-   justify-content: center;
-   border-right: 1px solid lightgrey;
-}
-.charText>div>span:nth-child(2){
-   width: 70%;
-   padding-left: 15px;
-}
-   /*****************************************캐릭인포 끝*/
-/*****************************************캐릭세부인포 시작*/
-.equipWindowBtn{
-   margin-top: 20px;
-   width: 100%;
-   display: flex;
-   gap: 7px;
-   height: 50px;
-}
-.equipWindowBtn>div{
-   width: 20%;
+.mid>.main>.charEquips>.charImg>.charText{
+   width: calc(100% - 285px);
    height: 100%;
-   border-radius: 4px;
-   text-align: center;
-   line-height: 50px;
-   border: 1px solid lightgrey;
-   transition: 0.2s ease-in-out;
 }
-.equipWindowBtn>div:hover{
-   cursor: pointer;
-   background-color: rgb(221, 244, 255);
-   border: 1px solid rgb(221, 244, 255);
-}
-.charEquip{
-   width: 100%;
-   padding: 0 5%;
-   margin-top: 15px;
-}
-.item{
-   display: flex;
-   margin-bottom: 5px;
-   width: 100%;
-   height: 60px;
-   border: 1px solid lightgrey;
-   border-radius: 4px;
-}
-.item>.ddsd{
-   width: 12%;
-   height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-right: 1px solid lightgray;
-}
-.equipTem{
-   width: 10%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-right: 1px solid lightgray;
-}
-.ref{
-   width: 10%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.item>.ddds{
-   width: 68%;
-   height: 100%;
-   display: flex;
-   align-items: center;
-   text-shadow: 0px 0px 0px rgb(175, 175, 175);
-   border-right: 1px solid lightgray;
-}
-.item>.equipTem>img{
-   width: 80%;
-   height: 80%;
-   object-fit: contain;
-}
-.nava{
-   width: 55%;
-   padding-left: 8px;
-}
-.havana{
-   width: 45%;
-   height: 100%;
-   padding-left: 8px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   border-left: 1px solid lightgray;
-}
-.ech{
-   width: 100% !important;
-   height: 60%;
-   font-size: smaller;
-   color: rgb(156, 154, 154) !important;
-}
-.ech2{
-   width: 100%;
-   height: 40%;
-   font-size: small;
-}
-.item>div>span{
-   width: 100%;
-   text-align: center;
-   color: black;
-}
-.charSpec{
-   margin-top: 15px;
-   display: grid;
-   grid-template-columns: repeat(2,1fr);
-   column-gap: 5px;
-   padding: 0 10%;
-}
-.fss{
-   margin-top: 8px;
-   display: flex;
-   border: 1px solid lightgray;
-   border-radius: 4px;
-   height: 40px;
-}
-.trs{
-   width: 30%;
-   text-align: center;
-   font-size: small;
-   line-height: 35px;
-   overflow: hidden;
-   border-right: 1px solid lightgray;
-}
-.tts{
-   width: 70%;
-   line-height: 35px;
-   text-align: center;
-}
-.fss2{
-   margin-top: 8px;
-   display: flex;
-   height: 50px;
+.mid>.main>.charEquips>.charImg>.charText>div{
+   height: 45px;
+   margin-bottom: 8px;
    border: 1px solid lightgray;
    border-radius: 4px;
 }
-.trs2{
-   width: 20%;
-   display: flex;
-   justify-content: center;
-}
-.tts2{
-   width: 80%;
-}
-.tts2>span{
-   width: 100%;
-   height: 50%;
+.mid>.main>.charEquips>.charImg>.charText>div>span:nth-child(1){
    display: inline-block;
-   overflow: hidden;
-}
-.charSpec2{
-   width: 100%;
-   margin-top: 15px;
-   padding: 0 8%;
-   display: grid;
-   grid-template-columns: repeat(8,1fr);
-   gap: 10px;
-}
-.totototo{
-   border: 1px solid lightgrey;
-   border-radius: 4px;
-   width: 100%;
-   min-height: 200px;
-}
-.totototo:nth-child(1){
-	grid-column: 3 / 7;
-	grid-row: 1 / 2;
-}
-.totototo:nth-child(2){   
-	grid-column: 1 / 5;
-	grid-row: 2 / 3;
-}
-.totototo:nth-child(3){   
-	grid-column: 5 / 9;
-	grid-row: 2 / 3;
-}
-.talisman{
-   width: 100%;
-   height: 30%;
+   width: 75px;
+   height: 100%;
    text-align: center;
+   line-height: 45px;
+   border-right: 1px solid lightgray;
 }
-.talisman>span{
+.mid>.main>.charEquips>.charImg>.charText>div>span:nth-child(2){
+   padding-left: 8px;
+}
+.mid>.main>.equipWindowBtn{
    width: 100%;
-   color: #cf00cf;
-}
-.taliRunes{
-   height: 70%;
+   height: 50px;
    display: flex;
-   flex-direction: column;
+   gap: 5px;
 }
-.taliRunes>span{
-   font-size: 10pt;
-   height: 33.33%;
+.mid>.main>.equipWindowBtn>div{
    text-align: center;
+   width: calc(100% * (1 / 6));
+   line-height: 50px;
+   border: 1px solid lightgray;
 }
-/*****************************************캐릭세부인포 끝*/
-/*****************************************아이템 리스트 시작*/
-.ItemsLists{
-   width: 100%;
-   padding: 3% 18%;
-   display: grid;
-   grid-template-columns: repeat(2,1fr);
+.mid>.main>.equipWindowBtn>div:hover{
+   cursor: pointer;
 }
-.itemNames{
+.mid>.main>.charEquip{
+   margin-top: 10px;
    width: 100%;
+}
+.mid>.main>.charEquip>.item{
+   display: flex;
+   width: 100%;
+   height: 55px;
    border: 1px solid lightgray;
    margin-bottom: 10px;
 }
-.tetes{
+.mid>.main>.charEquip>.item>.ddsd{
+   width: 12%;
+   text-align: center;
+   line-height: 50px;
+   overflow: hidden;
+   border-right: 1px solid lightgray;
+}
+.mid>.main>.charEquip>.item>.equipTem{
+   width: 53px;
+   padding: 7.5px;
+   border-right: 1px solid lightgray;
+}
+.mid>.main>.charEquip>.item>.equipTem>img{
    width: 100%;
+   object-fit: contain;
+}
+.mid>.main>.charEquip>.item>.ddds{
+   width: calc(78% - 53px);
    display: flex;
 }
-.itemRarity,.imgbox{
-   width: 15%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-shadow: 0px 0px 0px rgb(175, 175, 175);
+.stat{display: grid; grid-template-columns: repeat(2,1fr);gap: 8px;}
+.stat>.fss{width: 100%;height: 45px; border: 1px solid lightgray; border-radius: 4px;display: flex;}
+.stat>.fss>.trs{width: 27%; text-align: center;line-height: 42px; border-right: 1px solid lightgray;}
+.stat>.fss>.tts{width: 73%; text-align: center;line-height: 42px; font-size: 20px;}
+.avatarName{width: calc(88% - 53px);display: flex;}
+.avatarName>span:nth-child(1){width: 60%;border-right: 1px solid lightgray;}
+.avatarName>span:nth-child(2){width: 40%;}
+.avatarName>span{text-align: center;line-height: 50px;}
+.ttoottoo{width:100%;display: grid;gap: 10px; padding: 0 7%;}
+.totototo{height: 175px; border: 1px solid lightgray;}
+.talisman{width: 100%; height: 50%;display: flex; flex-direction: column;justify-content: center;align-items: center;}
+.taliimg{height: 35px; width: 35px; border-radius: 4px;}
+.talisman>span:nth-child(2){font-size: large;}
+.taliRunes{display: flex;flex-direction: column;text-align: center;gap: 5px;}
+.ttoottoo>div:nth-child(1){grid-column: 2/4;grid-row: 1/2}
+.ttoottoo>div:nth-child(2){grid-column: 1/3;grid-row: 2/3}
+.ttoottoo>div:nth-child(3){grid-column: 3/5;grid-row: 2/3}
+.fss2{width: 100%; border: 1px solid lightgrey; display: flex; height: 55px;}
+.buffTem{width: calc(75% - 53px); text-align: center; line-height: 50px;}
+.mid>.main>.charEquip>.item>.ddds>.nava{
+   width: 75%;
+   text-align: center;
+   border-right: 1px solid lightgray;
 }
-.itemTypeLevel{
-   width: 20%;
+.mid>.main>.charEquip>.item>.ddds>.nava>span{
+   display: block;
+   height: 50%;
+   line-height: 25px;
+}
+.mid>.main>.charEquip>.item>.ddds>.nava>.ech{
+   font-size: 11.5px;
+   color: rgb(0, 0, 0) !important;
+}
+.mid>.main>.charEquip>.item>.ddds>.havana{
+   width: 25%;
+   height: 100%;
+   text-align: center;
+   border-right: 1px solid lightgray;
+}
+.mid>.main>.charEquip>.item>.ddds>.havana>span{
+   display: block;
+   height: 100%;
+   line-height: 50px;
+   color: rgb(0, 0, 0) !important;
+}
+.mid>.main>.charEquip>.item>.ref{
+   width: 10%;
+   line-height: 50px;
+   text-align: center;
+}
+.mid>.main>.charEquip>.item>.ref>span{
+   width: 100%;
+   display: block;
+   height: 100%;
+   font-size: larger;
+}
+.ItemsLists{
    display: flex;
    flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
-.itemTypeLevel>span{
-   height: 50%;
+.duckTape{
+   width: 85%;
+   margin-bottom: 10px;
+}
+.itemNames{
+   width: 100%;
+   display: flex;
+   border: 1px lightgray solid;
+   height: 55px;
+}
+.itemBuff{
+   width: 100%;
+   border: 1px solid lightgray;
+   border-top: none;
+}
+.itemOptions{
+   width: 100%;
+   border: 1px solid lightgray;
+   border-bottom-left-radius: 6px;
+   border-bottom-right-radius: 6px;
+   border-top: none;
+}
+.itemRarity{
+   width: 15%;
    text-align: center;
+   line-height: 50px;
+   border-right: 1px lightgray solid;
+}
+.itemRarity>span{
+   font-size: large;
+}
+.imgbox{
+   width: 53px;
+   text-align: center;
+   padding: 7px;
+   border-right: 1px lightgray solid;
+}
+.imgbox>img{
+   width: 100%;
+   object-fit: contain;
+}
+.itemTypeLevel{
+   width: calc(35% - 53px);
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   border-right: 1px lightgray solid;
+}
+.itemTypeLevel>span:nth-child(1){
+   height: 55%;
+}
+.itemTypeLevel>span:nth-child(2){
    font-size: small;
 }
 .itemitemitem{
    width: 50%;
    text-align: center;
+   line-height: 50px;
 }
-.growInfo{
+.itemOptions>div{
    width: 100%;
    display: flex;
    flex-direction: column;
-   font-size: small;
+   padding: 5px 0;
+   border-bottom: 1px lightgray solid;
 }
-.imgbox>img{
-   width: 40px;
-   height: 40px;
-   object-fit: contain;
+.itemOptions>div:nth-child(4){
+   border: none;
 }
-/*****************************************아이템 리스트 끝*/
+.itemOptions>div>span{
+   padding-left: 5px;
+}
+.itemOptions>div>span:nth-child(1){
+   border-bottom: 1px lightgray solid;
+   width: 100%;
+   height: 25px !important;
+   line-height: 20px !important;
+}
+.itemOptions>div>span{
+   line-height: 30px;
+   width: 100%;
+}
+/************************************************/
 .boardPage{
    width: 100%;
    min-height: 100vh;
+   padding: 0 15%;
+   display: flex;
+}
+.boardSection{
+   padding: 0 15px;
+}
+.recommand{
+   border-left: 1px solid black;
+}
+.boardSection{ width: 80%;}
+.recommand{ width: 20%;}
+.noticeTable,.freeTable{ width: 100%;}
+.notice.free{
+   width: 100%;
+}
+.notice>div,.free>div{
+   padding: 5px 5px 0 5px;
+   border-bottom: 1px solid lightgray;
+}
+.notice>div>span{ display: inline-block; font-weight: 500; height: 27px;}
+.notice>div>span,.free>div>span{
+   border-right: 1px solid lightgray;
+}
+.notice>div>span:nth-child(1){width: 10%;text-align: center;}
+.notice>div>span:nth-child(2){width: 55%;text-align: center;}
+.notice>div>span:nth-child(3){width: 20%;text-align: center;}
+.notice>div>span:nth-child(4){width: 15%;text-align: center; border: none;}
+.free>div>span{display: inline-block; height: 27px;}
+.free>div>span:nth-child(1){width: 10%;text-align: center;}
+.free>div>span:nth-child(2){width: 55%; padding-left: 10px;}
+.free>div>span:nth-child(2)>a{text-decoration: none; color: black;}
+.free>div>span:nth-child(3){width: 20%;text-align: center;}
+.free>div>span:nth-child(4){width: 15%;text-align: center; border: none;}
+.boardSection>.deus{width: 100%; border-bottom: 1px solid lightgray; margin-bottom: 5px; padding-bottom: 5px;}
+.boardSection>.exmakina>span{
+   display: inline-block;
+   width: 80px;
+   height: 30px;
+   line-height: 25px;
+   border: 1px solid thistle;
+   text-align: center;
+}
+.boardSection>.exmakina>span:nth-child(2){margin-left: 5px;}
+.boardSection>.exmakina>span:nth-child(3){float: right;}
+/************************************************/
+@media screen and (max-width: 1090px) {
+   .mid{
+      min-height: 80vh;
+      display: flex;
+      padding: 0 10%;
+   }
+   .mid>.main>.charEquips>.charImg>.imgimg{
+      width: 285px;
+      height: 350px;
+	}   
+   .boardPage{
+      padding: 0;
+   }
+   .boardSection{
+      width: 75%;
+   }
+   .recommand{
+      width: 25%;
+   }
+/***********************************************************************************/
+.mid>.main>.charLists{
+   width: 100%;
+   text-align: center;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 10px;
+   margin-bottom: 15px;
+}
+.mid>.main>.charLists>.userNames{
+   height: 200px;
+}
+.mid>.main>.charLists>.userNames>img{
+   margin-top: -30px;
+   object-fit: contain;
+}
+/***********************************************************************************/
 }

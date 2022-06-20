@@ -3,43 +3,66 @@
    margin: 0;
    box-sizing: border-box;
 }
-.커먼{color:#FFFFFF !important;}
-.언커먼{color:#68D5ED !important;}
-.레어{color:#B36BFF !important;}
-.유니크{color:#FF00FF !important;}
-.에픽{color:#FFB400 !important;}
-.크로니클{color:#FF6666 !important;}
-.레전더리{color:#FF7800 !important;}
-.차원의{color: #c300ff !important;}
+.커먼{color:#FFFFFF !important;
+   text-shadow: 0px 0px 0px rgb(175, 175, 175) !important;}
+.언커먼{color:#68D5ED !important;
+   text-shadow: 0px 0px 0px rgb(175, 175, 175) !important;}
+.레어{color:#B36BFF !important;
+   text-shadow: 0px 0px 0px rgb(175, 175, 175) !important;}
+.유니크{color:#FF00FF !important;
+   text-shadow: 0px 0px 0px rgb(175, 175, 175) !important;}
+.에픽{color:#FFB400 !important;
+   text-shadow: 0px 0px 0px rgb(175, 175, 175) !important;}
+.크로니클{color:#FF6666 !important;
+   text-shadow: 0px 0px 0px rgb(175, 175, 175) !important;}
+.레전더리{color:#FF7800 !important;
+   text-shadow: 0px 0px 0px rgb(175, 175, 175) !important;}
+.차원의{color: #c300ff !important;
+   text-shadow: 0px 0px 0px rgb(175, 175, 175) !important;}
 .신화{
    background: linear-gradient(180deg, rgb(243, 233, 84), rgb(224, 0, 150));
    background-clip: text;
    -webkit-background-clip: text;
    color: rgba(0, 0, 0, 0) !important;
-   text-shadow: 0px 0px 0px rgba(255, 255, 255, 0) !important;
+   text-shadow: 0px 0px 0px rgba(175, 175, 175, 0) !important;
 }
-/*************************************************************Top바 시작*/
-.Top{
+.세컨드{color: red;}
+.테라코타{color: rgb(168, 36, 168);}
+.서클{color: rgb(27, 141, 27);}
+.수호자들{color: rgb(44, 144, 184);}
+.고대{color: rgb(207, 196, 35); }
+.카펠라{background-image: url("https://firebasestorage.googleapis.com/v0/b/plogprojects.appspot.com/o/e564fd07f63f7aca75c39599dd13eb12.png?alt=media&token=20456487-f60b-4c86-afbb-629fce2a2e5b");background-position: center;background-size: contain;}
+.온전한{background-image: url("https://firebasestorage.googleapis.com/v0/b/plogprojects.appspot.com/o/0129b2a5f27fc896eb934b494b6f352d.png?alt=media&token=a281fe1e-9873-4bfa-b137-ac105836ae3a");background-position: center;background-size: contain;}
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+#root{
    width: 100%;
-   height: 50px;
+   min-height: 100vh;
 }
-.Top>ul{
+.top{
+   height: 50px;
+   display: flex;
+   margin-bottom: 10px;
+}
+.top>.menu{
+   width: 80%;
+}
+.top>.menu>ul{
+   list-style: none;
    width: 100%;
    height: 100%;
-   list-style: none;
    display: flex;
    gap: 5px;
 }
-.Top>ul>li{
-   width: 20%;
+.top>.menu>ul>li{
+   width: 33.33%;
    text-align: center;
-   transition: ease-out 0.25s;
-   background-color: rgb(161, 210, 230)
+   background-color: #B36BFF;
 }
-.Top>ul>li:hover{
-   background-color: rgb(96, 204, 247);
-}
-.Top>ul>li>a{
+.top>.menu>ul>li>a{
    display: inline-block;
    text-decoration: none;
    color: white;
@@ -47,20 +70,65 @@
    width: 50%;
    font-size: small;
 }
-.Top>ul>li>a>.icons{
+.top>.menu>ul>li>a>.icons{
    padding-top: 3px;
    margin-bottom: 4px;
    display: block;
    height: 50%;
-   font-size: 15pt;
+   font-size: 12pt;
 }
-/*************************************************************Top바 끝*/
-/*************************************************************footer 시작*/
-footer{
+.top>.searchbar{
+   width: 20%;
+   height: 100%;
+   padding-left: 5px;
+}
+.top>.searchbar>.loginBox{
    width: 100%;
-   padding-top: 20px;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   background-color: #FF6666;
+}
+.bot{
+   height: 150px;
+   background-image: url("https://firebasestorage.googleapis.com/v0/b/plogprojects.appspot.com/o/svisual_df.jpg?alt=media&token=5f9b298a-2033-4f46-bc28-b5f669d8f856");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.bot>*{   
+   height: 50%;
+   background-color: rgba(255, 255, 255, 0.250);
+}
+.bot>footer{
+   width: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
 }
-/*************************************************************footer 끝*/
+.bot>div{
+   width: 100%;
+   display: flex;
+   align-items: center;
+}
+.bot>div>ul{
+   height: 50%;
+   list-style: none;
+   display: flex;
+   gap: 5px;
+   width: 50%;
+}
+.bot>div>ul>li{
+   width: 200px;
+   text-align: center;
+   line-height: 37.5px;
+}
+.bot>div>ul>li>a{
+   display: inline-block;
+   text-decoration: none;
+   color: white;
+   height: 100%;
+   font-size: 20pt;
+}

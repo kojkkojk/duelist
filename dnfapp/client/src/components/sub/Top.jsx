@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaSearch, FaToolbox, FaPen, FaUserAlt } from 'react-icons/fa'
+import {GiCardJoker} from 'react-icons/gi'
 
 function Top() {
    return (
@@ -16,6 +17,11 @@ function Top() {
                   <Link to={"/items"}>
                      <span className='icons'><FaToolbox /></span>
                      <span>아이템 검색</span>
+                  </Link></li>
+               <li>
+                  <Link to={"/card"}>
+                     <span className='icons'><GiCardJoker /></span>
+                     <span>마부 카드</span>
                   </Link></li>
                <li>
                   <Link to={"/boards"}>

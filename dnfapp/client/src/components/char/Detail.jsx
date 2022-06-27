@@ -345,11 +345,22 @@ function Detail() {
                   }
                 </div> : <></>}</>}
         {selectOrder === "스킬" ? 
-        <div>
-          <div><span>액티브</span><span>패시브</span></div>
-          {charDetailDatas.skillStyle.style ? "a" : "b"}
-        </div>
-        :<></>}
+        <div className='charEquip'>
+          <div className='skilskil'><span onClick={()=>{setSkillCheck(0)}}>액티브</span><span onClick={()=>{setSkillCheck(1)}}>패시브</span></div>
+          {skillCheck === 0 ? 
+          charDetailDatas.skillStyle.style.active.map((skils,index)=>(
+            <div className='skillInfoWindow' key={index}>
+              <span>{skils.name}</span>
+              <span>{skils.level}</span>
+            </div>
+          ))
+          : charDetailDatas.skillStyle.style.passive.map((skils,index)=>(
+            <div className='skillInfoWindow' key={index}>
+              <span>{skils.name}</span>
+              <span>{skils.level}</span>
+            </div>
+          ))}
+        </div>:<></>}
     </>
   )
 }

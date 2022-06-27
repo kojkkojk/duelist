@@ -253,6 +253,38 @@
    height: 100%;
    font-size: larger;
 }
+.skilskil{
+   width: 100%;
+   display: flex;
+   gap: 5px;
+   margin-bottom: 8px;
+}
+.skilskil>span{
+   width: 50%;
+   text-align: center;
+   line-height: 30px;
+   height: 35px;
+   border: 1px solid lightgrey;
+}
+.skilskil>span:hover{
+   cursor: pointer;
+}
+.skillInfoWindow{
+   margin-bottom: 5px;   
+   border: 1px solid lightgrey;
+   height: 35px;
+   line-height: 30px;
+}
+.skillInfoWindow>span{
+   text-align: center;
+   display: inline-block;
+}
+.skillInfoWindow>span:nth-child(1){
+   width: 70%;
+}
+.skillInfoWindow>span:nth-child(2){
+   width: 30%;
+}
 .ItemsLists{
    display: flex;
    flex-direction: column;
@@ -341,6 +373,22 @@
    line-height: 30px;
    width: 100%;
 }
+/**************************************************/
+.cardPage{
+   width: 780px;
+   margin: 0 auto;
+}
+.cardTable{width: 100%; border-collapse: separate; border-spacing: 0 10px;}
+.tuy{display: grid; width: 100%; gap: 3px; grid-template-columns: repeat(3,1fr);}
+.cardPotrait>td{height: 100px; border-bottom: 1px solid black; border-top: 1px solid black;}
+.cardPotraitIMG{display: flex; justify-content: center; align-items: center; height: 100%; border-right: 1px solid black;}
+.rpoc{border-right: 1px solid black;}
+.rpoc>p{text-align: center;}
+.rpoc>p:nth-child(1){height: 25%; font-size: small;}
+.rpoc>p:nth-child(2){height: 75%;}
+.tuy>div{text-align: center;height: 100%; display: grid; grid-template-rows: repeat(5,1fr);}
+.tuy>div>p{font-size: small;}
+/**************************************************/
 /************************************************/
 .boardPage{
    width: 100%;
